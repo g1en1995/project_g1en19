@@ -65,8 +65,8 @@ if st.button('Get Population Projections'):
     st.altair_chart(alt.Chart(df, height=700, width=700)
     .mark_point(filled=True)
     .encode(
-        x = alt.X("AGE:Q").title("Age"),
-        y = alt.Y("POP:Q").title("Population"),
+        x = alt.X("AGE").title("Age"),
+        y = alt.Y("POP").title("Population"),
     ))
     
 
