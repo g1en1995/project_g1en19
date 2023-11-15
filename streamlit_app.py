@@ -62,7 +62,7 @@ if st.button('Get Population Projections'):
     df = pd.DataFrame(jsonData)
     st.dataframe(df)
 
-    line = alt.Chart(df).mark_line(color="#333").encode(
+    line = alt.Chart(df).mark_line(color="#f00505").encode(
     alt.X("AGE:Q").title("Age"),
     alt.Y("POP:Q").title("Population"),)
 
