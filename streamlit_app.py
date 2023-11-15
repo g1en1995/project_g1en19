@@ -71,9 +71,6 @@ if st.button('Get Population Projections'):
     width=500,
     height=300)
 
-
-
-
     
 
 else: 
