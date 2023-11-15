@@ -62,9 +62,9 @@ if st.button('Get Population Projections'):
     df = pd.DataFrame(jsonData)
     st.dataframe(df)
 
-    st.altair_chart(alt.Chart(df).mark_line(color="#f00505").encode(
-    alt.X("AGE:Q").title("Age"),
-    alt.Y("POP:Q").title("Population")))
+    st.altair_chart(alt.Chart(df).mark_point(color="#f00505").encode(
+    x = alt.X("AGE:Q").title("Age"),
+    y = alt.Y("POP:Q").title("Population")))
 
     # st.altair_chart((line).properties(
     # title= f"Population of {country} from 2003 to {years} in total",
