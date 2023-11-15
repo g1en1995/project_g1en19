@@ -46,8 +46,8 @@ apiKey = '49151930da411856c561cc751ee2945a6a5f249a'
 country = 'IN'
 st.write(f'{country}')
 
-years = st.text_input('Years limit', '2100')
-st.write(f'Projections from 2023 to {years}')
+year = st.text_input('Years limit', '2100')
+st.write(f'Projections for year {year}')
 
 # perform check box selection for males, females, or both
 # 0 - total, 1 - male, 2 - female
@@ -56,7 +56,7 @@ age =  st.text_input('Age Limit', '100')
 st.write(f'Age window from 0 to {age}')
 
 if st.button('Get Population Projections'):
-    response = requests.get(f'https://api.census.gov/data/timeseries/idb/1year?get=NAME,GENC,POP&YR=2023:{years}&AGE=0:{age}&SEX=0&for=genc+standard+countries+and+areas:{country}&key={apiKey}')
+    response = requests.get(f'https://api.census.gov/data/timeseries/idb/1year?get=NAME,GENC,POP&YR=2023:{year}&AGE=0:{age}&SEX=0&for=genc+standard+countries+and+areas:{country}&key={apiKey}')
     # response.raise_for_status()
     # ['NAME', 'GENC', 'POP', 'YR', 'AGE', 'SEX', 'genc standard countries and areas']
     jsonData = json.loads(response.text)
