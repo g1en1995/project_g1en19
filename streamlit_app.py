@@ -43,7 +43,7 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 country = 'IN'
 
-years = st.text_input()
+years = st.text_input('Years limit', '2023')
 st.write(f'Projections from 2023 to {years}')
 
 if st.button('Get Population Projections'):
