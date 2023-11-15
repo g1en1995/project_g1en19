@@ -51,7 +51,8 @@ if st.button('Get Population Projections'):
     # response.raise_for_status()
     jsonData = json.loads(response.text)
     st.write(jsonData[:50])
-    st.write(pd.json_normalize(jsonData[:50]))
+    st.write(pd.DataFrame(jsonData[:50]))
+    
 
 else: 
     st.write('Things to check out: Population Projections')
