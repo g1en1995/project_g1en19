@@ -50,6 +50,7 @@ if st.button('Get Population Projections'):
     response = requests.get(f'https://api.census.gov/data/timeseries/idb/1year?get=NAME,GENC,POP&YR=2023:{years}&AGE=0:100&SEX=1,2&for=genc+standard+countries+and+areas:{country}&key=49151930da411856c561cc751ee2945a6a5f249a')
     # response.raise_for_status()
     jsonData = json.loads(response.text)
+    st.write(jsonData[:50])
     st.write(pd.json_normalize(jsonData[:50]))
 
 else: 
