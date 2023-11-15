@@ -41,9 +41,10 @@ In the meantime, below is an example of what you can do with just a few lines of
 #         size=alt.Size("rand", legend=None, scale=alt.Scale(range=[1, 150])),
 #     ))
 
-years = st.slider("Year Window", 2023, 2100)
 country = 'IN'
 
+years = st.text_input()
+st.write(f'Projections from 2023 to {years}')
 
 if st.button('Get Population Projections'):
     response = requests.get(f'https://api.census.gov/data/timeseries/idb/1year?get=NAME,GENC,POP&YR=2023:f{years}&AGE=0:100&SEX=1,2&for=genc+standard+countries+and+areas:{country}&key=49151930da411856c561cc751ee2945a6a5f249a')
