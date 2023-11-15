@@ -63,19 +63,17 @@ if st.button('Get Population Projections'):
     st.dataframe(df)
 
     st.altair_chart(alt.Chart(df, height=700, width=700)
-    .mark_point(filled=True)
+    .mark_bar()
     .encode(
-        x = alt.X("AGE:O").title("Age"),
-        y = alt.Y("POP:Q").title("Population"),
+        x = "AGE:O",
+        y = "POP:Q",
     ))
-    
 
     # st.altair_chart((line).properties(
     # title= f"Population of {country} from 2003 to {years} in total",
     # width=500,
     # height=300))
 
-    
 
 else: 
     st.write(f'Things to check out: Population Projections for {country}')
