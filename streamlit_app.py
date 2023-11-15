@@ -66,10 +66,10 @@ if st.button('Get Population Projections'):
     alt.X("YR:T").axis(format="%Y").title("Year"),
     alt.Y("POP").title("Population"),)
 
-    (line).properties(
+    st.altair_chart((line).properties(
     title= f"Population of {country} from 2003 to {years} in total",
     width=500,
-    height=300)
+    height=300))
 
     
 
