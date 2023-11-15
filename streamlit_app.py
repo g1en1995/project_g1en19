@@ -67,7 +67,7 @@ if st.button('Get Population Projections'):
     .encode(
         x = "AGE:O",
         y = "POP:Q",
-        color=alt.ColorName('violet')
+        color=alt.value('orange')
     ).properties(width=600))
 
     # st.altair_chart((line).properties(
