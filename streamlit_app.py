@@ -52,7 +52,7 @@ if st.button('Get Population Projections'):
     jsonData = json.loads(response.text)
     st.write(jsonData[:50])
     df = pd.DataFrame(jsonData[:50])
-    st.write(pd.DataFrame(df))
+    st.dataframe(df)
     
 
 else: 
