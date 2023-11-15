@@ -62,14 +62,14 @@ if st.button('Get Population Projections'):
     df = pd.DataFrame(jsonData)
     st.dataframe(df)
 
-    line = alt.Chart(df).mark_line(color="#333").encode(
-    alt.X("YR:T").axis(format="%Y").title("Year"),
-    alt.Y("POP").title("Population"),)
+    # line = alt.Chart(df).mark_line(color="#333").encode(
+    # alt.X("YR:T").axis(format="%Y").title("Year"),
+    # alt.Y("POP").title("Population"),)
 
-    (line).properties(
-    title= f"Population of {country} from 2003 to {years} in total",
-    width=500,
-    height=300)
+    # (line).properties(
+    # title= f"Population of {country} from 2003 to {years} in total",
+    # width=500,
+    # height=300)
 
     
 
