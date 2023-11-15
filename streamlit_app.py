@@ -63,7 +63,7 @@ if st.button('Get Population Projections'):
     st.dataframe(df)
 
     line = alt.Chart(df).mark_line(color="#333").encode(
-    alt.X("YR:T").axis(format="%Y").title("Year"),
+    alt.X("AGE:Q").title("Age"),
     alt.Y("POP:Q").title("Population"),)
 
     st.altair_chart((line).properties(
