@@ -6,13 +6,11 @@ import requests
 import json
 
 """
-# Welcome to Streamlit!
+# Welcome :heart:.
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+This is an effort to document, explore my different areas of interests. Visualize to showcase my point of view.
 
-In the meantime, below is an example of what you can do with just a few lines of code:
+Thanks to Streamlit for building the platform. 
 """
 
 # num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
